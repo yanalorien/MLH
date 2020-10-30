@@ -17,12 +17,12 @@ describe('My Little Hero', function () {
         });
 
         it('TC-003 Description text is present', function () {
-            const description = $(sel.text).isDisplayed();
+            const description = $(sel.description).isDisplayed();
             expect(description).toEqual(true);
         });
 
         it('TC-004 Description text = Let\'s create your own HERO! It\'s super easy with our application!', function () {
-            const text = $(sel.text).getText();
+            const text = $(sel.description).getText();
             expect(text).toEqual(exp.descriptionText);
         });
 
@@ -89,6 +89,27 @@ describe('My Little Hero', function () {
             const placeholder = $(sel.age).getAttribute('placeholder');
             expect(placeholder).toEqual(exp.placeholderAge);
         });
+
+        it('TC-017 Label for story', function () {
+            const label = $$(sel.label)[3].isDisplayed();
+            expect(label).toEqual(true);
+        });
+
+        it('TC-018 Label for story = 4. What type of story would you like to read?', function () {
+            const text = $$(sel.label)[3].getAttribute('title');
+            expect(text).toEqual(exp.labelStory);
+        });
+
+        it('TC-019 Story', function () {
+            const field = $(sel.story).isDisplayed();
+            expect(field).toEqual(true);
+        });
+
+        it('TC-020 Story placeholder = Type of the story', function () {
+            const placeholder = $(sel.storyPlaceholder).getText();
+            expect(placeholder).toEqual(exp.placeholderStory);
+        });
+
 
     });
 

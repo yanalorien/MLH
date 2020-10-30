@@ -7,6 +7,7 @@
   "descriptionText" : "Let's create your own HERO! It's super easy with our application!",
   "placeholderName" : "Hero's name",
   "placeholderAge" : "Hero's age",
+  "placeholderStory" : "Type of the story",
   "radioText1" : "he",
   "radioText2" : "she",
   "radioText3" : "it"
