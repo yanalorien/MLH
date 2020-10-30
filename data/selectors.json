@@ -4,5 +4,6 @@
   "gender": ".ant-radio-input",
   "age": "#age",
   "story": "#story",
-  "header" : "//h3"
+  "header" : "//h3",
+  "text" : "//p"
 }
