@@ -56,12 +56,12 @@ describe('My Little Hero', function () {
             expect(text).toEqual(exp.labelGender);
         });
 
-        it('TC-007 Gender radio buttons are present', function () {
+        it('TC-011 Gender radio buttons are present', function () {
             const button = ($$(sel.gender)[0] && $$(sel.gender)[1] && $$(sel.gender)[2]).isDisplayed();
             expect(button).toEqual(true);
         });
 
-        it('TC-007 Gender radio buttons are correct', function () {
+        it('TC-012 Gender radio buttons text = he, she, it', function () {
             const text1 = $$(sel.radioLabel)[0].getText();
             expect(text1).toEqual(exp.radioText1);
             const text2 = $$(sel.radioLabel)[1].getText();
@@ -70,7 +70,25 @@ describe('My Little Hero', function () {
             expect(text3).toEqual(exp.radioText3);
         });
 
+        it('TC-013 Label for age is present', function () {
+            const label = $$(sel.label)[2].isDisplayed();
+            expect(label).toEqual(true);
+        });
 
+        it('TC-014 Label for age = 3. How old is your Hero?', function () {
+            const text = $$(sel.label)[2].getAttribute('title');
+            expect(text).toEqual(exp.labelAge);
+        });
+
+        it('TC-015 Age field is present', function () {
+            const field = $(sel.age).isDisplayed();
+            expect(field).toEqual(true);
+        });
+
+        it('TC-016 Age placeholder = Hero\'s age', function () {
+            const placeholder = $(sel.age).getAttribute('placeholder');
+            expect(placeholder).toEqual(exp.placeholderAge);
+        });
 
     });
 
