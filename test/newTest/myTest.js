@@ -56,10 +56,21 @@ describe('My Little Hero', function () {
             expect(text).toEqual(exp.labelGender);
         });
 
-        // it('TC-007 Label for gender = 2. Please choose a gender.', function () {
-        //     const text = $$(sel.gender).isDisplayed();
-        //     expect(text).toEqual(exp.labelGender);
-        // });
+        it('TC-007 Gender radio buttons are present', function () {
+            const button = ($$(sel.gender)[0] && $$(sel.gender)[1] && $$(sel.gender)[2]).isDisplayed();
+            expect(button).toEqual(true);
+        });
+
+        it('TC-007 Gender radio buttons are correct', function () {
+            const text1 = $$(sel.radioLabel)[0].getText();
+            expect(text1).toEqual(exp.radioText1);
+            const text2 = $$(sel.radioLabel)[1].getText();
+            expect(text2).toEqual(exp.radioText2);
+            const text3 = $$(sel.radioLabel)[2].getText();
+            expect(text3).toEqual(exp.radioText3);
+        });
+
+
 
     });
 

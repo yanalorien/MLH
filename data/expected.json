@@ -5,5 +5,8 @@
   "labelStory": "4. What type of story would you like to read?",
   "labelHeader": "My Little Hero",
   "descriptionText" : "Let's create your own HERO! It's super easy with our application!",
-  "placeholderName" : "Hero's name"
+  "placeholderName" : "Hero's name",
+  "radioText1" : "he",
+  "radioText2" : "she",
+  "radioText3" : "it"
 }
