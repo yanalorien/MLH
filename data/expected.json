@@ -4,5 +4,6 @@
   "labelAge": "3. How old is your Hero?",
   "labelStory": "4. What type of story would you like to read?",
   "labelHeader": "My Little Hero",
-  "descriptionText" : "Let's create your own HERO! It's super easy with our application!"
+  "descriptionText" : "Let's create your own HERO! It's super easy with our application!",
+  "placeholderName" : "Hero's name"
 }
