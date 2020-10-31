@@ -61,7 +61,7 @@ describe('My Little Hero', function () {
             expect(button).toEqual(true);
         });
 
-        it('TC-012 Gender radio buttons text = he, she, it', function () {
+        it('TC-012 Gender radio button names = he, she, it', function () {
             const text1 = $$(sel.radioLabel)[0].getText();
             expect(text1).toEqual(exp.radioText1);
             const text2 = $$(sel.radioLabel)[1].getText();
@@ -90,7 +90,7 @@ describe('My Little Hero', function () {
             expect(placeholder).toEqual(exp.placeholderAge);
         });
 
-        it('TC-017 Label for story', function () {
+        it('TC-017 Label for story is present', function () {
             const label = $$(sel.label)[3].isDisplayed();
             expect(label).toEqual(true);
         });
@@ -100,7 +100,7 @@ describe('My Little Hero', function () {
             expect(text).toEqual(exp.labelStory);
         });
 
-        it('TC-019 Story', function () {
+        it('TC-019 Story field is present', function () {
             const field = $(sel.story).isDisplayed();
             expect(field).toEqual(true);
         });
@@ -108,6 +108,36 @@ describe('My Little Hero', function () {
         it('TC-020 Story placeholder = Type of the story', function () {
             const placeholder = $(sel.storyPlaceholder).getText();
             expect(placeholder).toEqual(exp.placeholderStory);
+        });
+
+        it('TC-021 Label for image is present', function () {
+            const label = $(sel.labelImage).isDisplayed();
+            expect(label).toEqual(true);
+        });
+
+        it('TC-022 Label for image = 5. Upload an image (optional)', function () {
+            const text = $(sel.labelImage).getText();
+            expect(text).toEqual(exp.labelImage);
+        });
+
+        it('TC-023 Image upload field is present', function () {
+            const field = $(sel.image).isDisplayed();
+            expect(field).toEqual(true);
+        });
+
+        it('TC-024 Image placeholder = drag and drop your image here or browse', function () {
+            const placeholder = $(sel.imagePlaceholder).getText();
+            expect(placeholder).toEqual(exp.placeholderImage);
+        });
+
+        it('TC-025 Submit button is present', function () {
+            const button = $(sel.submit).isDisplayed();
+            expect(button).toEqual(true);
+        });
+
+        it('TC-026 Submit button = Create!', function () {
+            const button = $(sel.submitName).getText();
+            expect(button).toEqual(exp.submitName);
         });
 
 

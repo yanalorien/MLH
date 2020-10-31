@@ -1,11 +1,16 @@
 {
   "label": ".ant-form-item-required",
+  "labelImage": "//label[@title= '5. Upload an image (optional)']",
   "name": "#name",
   "gender": ".ant-radio",
   "age": "#age",
   "story": ".ant-select-selector",
-  "header" : "//h3",
-  "description" : "//p",
-  "radioLabel" : "//span[@class='ant-radio']/following-sibling::span",
-  "storyPlaceholder" : ".ant-select-selection-placeholder"
+  "header": "//h3",
+  "description": "//p",
+  "radioLabel": "//span[@class='ant-radio']/following-sibling::span",
+  "storyPlaceholder": ".ant-select-selection-placeholder",
+  "image": ".ant-upload",
+  "imagePlaceholder": "//span[@class='ant-upload']//div/div",
+  "submit": ".ant-btn",
+  "submitName": "//button/span"
 }

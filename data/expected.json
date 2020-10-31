@@ -4,11 +4,14 @@
   "labelAge": "3. How old is your Hero?",
   "labelStory": "4. What type of story would you like to read?",
   "labelHeader": "My Little Hero",
-  "descriptionText" : "Let's create your own HERO! It's super easy with our application!",
-  "placeholderName" : "Hero's name",
-  "placeholderAge" : "Hero's age",
-  "placeholderStory" : "Type of the story",
-  "radioText1" : "he",
-  "radioText2" : "she",
-  "radioText3" : "it"
+  "labelImage": "5. Upload an image (optional)",
+  "descriptionText": "Let's create your own HERO! It's super easy with our application!",
+  "placeholderName": "Hero's name",
+  "placeholderAge": "Hero's age",
+  "placeholderStory": "Type of the story",
+  "placeholderImage": "drag and drop your image here or browse",
+  "radioText1": "he",
+  "radioText2": "she",
+  "radioText3": "it",
+  "submitName": "Create!"
 }
