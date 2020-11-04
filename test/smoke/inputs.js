@@ -49,7 +49,7 @@ describe('Inputs', function () {
             expect(placeholder).toEqual(exp.placeholderName);
         });
 
-        t('TC-022 Gender radio button names = he', function () {
+        it('TC-022 Gender radio button names = he', function () {
             const text1 = $$(sel.radioLabel)[0].getText();
             expect(text1).toEqual(exp.radioText1);
         });

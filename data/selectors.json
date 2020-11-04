@@ -13,5 +13,6 @@
   "imagePlaceholder": "//span[@class='ant-upload']//div/div",
   "submit": ".ant-btn",
   "submitName": "//button/span",
-  "storyType": ".ant-select-item-option"
+  "storyType": ".ant-select-item-option",
+  "tryAgain": ".btn-primary"
 }
