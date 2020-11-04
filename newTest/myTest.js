@@ -56,107 +56,135 @@ describe('My Little Hero', function () {
             expect(text).toEqual(exp.labelGender);
         });
 
-        it('TC-011 Gender radio buttons are present', function () {
-            const button = ($$(sel.gender)[0] && $$(sel.gender)[1] && $$(sel.gender)[2]).isDisplayed();
+        it('TC-011 Gender radio button he is present', function () {
+            const button = $$(sel.gender)[0].isDisplayed();
             expect(button).toEqual(true);
         });
 
-        it('TC-012 Gender radio button names = he, she, it', function () {
+        it('TC-012 Gender radio button she is present', function () {
+            const button = $$(sel.gender)[1].isDisplayed();
+            expect(button).toEqual(true);
+        });
+
+        it('TC-013 Gender radio button it is present', function () {
+            const button = $$(sel.gender)[2].isDisplayed();
+            expect(button).toEqual(true);
+        });
+
+        it('TC-014 Gender radio button names = he', function () {
             const text1 = $$(sel.radioLabel)[0].getText();
             expect(text1).toEqual(exp.radioText1);
+        });
+
+        it('TC-015 Gender radio button names = she', function () {
             const text2 = $$(sel.radioLabel)[1].getText();
             expect(text2).toEqual(exp.radioText2);
+        });
+
+        it('TC-016 Gender radio button names = it', function () {
             const text3 = $$(sel.radioLabel)[2].getText();
             expect(text3).toEqual(exp.radioText3);
         });
 
-        it('TC-013 Label for age is present', function () {
+        it('TC-017 Label for age is present', function () {
             const label = $$(sel.label)[2].isDisplayed();
             expect(label).toEqual(true);
         });
 
-        it('TC-014 Label for age = 3. How old is your Hero?', function () {
+        it('TC-018 Label for age = 3. How old is your Hero?', function () {
             const text = $$(sel.label)[2].getAttribute('title');
             expect(text).toEqual(exp.labelAge);
         });
 
-        it('TC-015 Age field is present', function () {
+        it('TC-019 Age field is present', function () {
             const field = $(sel.age).isDisplayed();
             expect(field).toEqual(true);
         });
 
-        it('TC-016 Age placeholder = Hero\'s age', function () {
+        it('TC-020 Age placeholder = Hero\'s age', function () {
             const placeholder = $(sel.age).getAttribute('placeholder');
             expect(placeholder).toEqual(exp.placeholderAge);
         });
 
-        it('TC-017 Label for story is present', function () {
+        it('TC-021 Label for story is present', function () {
             const label = $$(sel.label)[3].isDisplayed();
             expect(label).toEqual(true);
         });
 
-        it('TC-018 Label for story = 4. What type of story would you like to read?', function () {
+        it('TC-022 Label for story = 4. What type of story would you like to read?', function () {
             const text = $$(sel.label)[3].getAttribute('title');
             expect(text).toEqual(exp.labelStory);
         });
 
-        it('TC-019 Story field is present', function () {
+        it('TC-023 Story field is present', function () {
             const field = $(sel.story).isDisplayed();
             expect(field).toEqual(true);
         });
 
-        it('TC-020 Story placeholder = Type of the story', function () {
+        it('TC-024 Story placeholder = Type of the story', function () {
             const placeholder = $(sel.storyPlaceholder).getText();
             expect(placeholder).toEqual(exp.placeholderStory);
         });
 
-        it('TC-021 Label for image is present', function () {
+        it('TC-025 Label for image is present', function () {
             const label = $(sel.labelImage).isDisplayed();
             expect(label).toEqual(true);
         });
 
-        it('TC-022 Label for image = 5. Upload an image (optional)', function () {
+        it('TC-026 Label for image = 5. Upload an image (optional)', function () {
             const text = $(sel.labelImage).getText();
             expect(text).toEqual(exp.labelImage);
         });
 
-        it('TC-023 Image upload field is present', function () {
+        it('TC-027 Image upload field is present', function () {
             const field = $(sel.image).isDisplayed();
             expect(field).toEqual(true);
         });
 
-        it('TC-024 Image placeholder = drag and drop your image here or browse', function () {
+        it('TC-028 Image placeholder = drag and drop your image here or browse', function () {
             const placeholder = $(sel.imagePlaceholder).getText();
             expect(placeholder).toEqual(exp.placeholderImage);
         });
 
-        it('TC-025 Submit button is present', function () {
+        it('TC-029 Submit button is present', function () {
             const button = $(sel.submit).isDisplayed();
             expect(button).toEqual(true);
         });
 
-        it('TC-026 Submit button = Create!', function () {
+        it('TC-030 Submit button = Create!', function () {
             const button = $(sel.submitName).getText();
             expect(button).toEqual(exp.submitName);
         });
 
-
     });
 
-    // describe('Labels exist', function () {
-    //
-    //     it('TC-002 Label for name', function () {
-    //         const label = $$(sel.label)[0].isDisplayed();
-    //         expect(label).toEqual(true);
-    //     });
-    //
-    //     // it('TC-002 Label for name', function () {
-    //     //     const label = $$(sel.label)[0].isDisplayed();
-    //     //     expect(label).toEqual(true);
-    //     // });
-    //
-    //
-    //
-    // });
+    describe('Name field inputs', function () {
+
+        it('TC-031 Name field accepts letters', function (){
+            browser.url('');
+            const input = $(sel.name).setValue('abcd');
+            const value = $(sel.name).getValue();
+            expect(value).toEqual('abcd');
+        });
+
+        it('TC-032 Name field accepts numbers', function (){
+            browser.url('');
+            const input = $(sel.name).setValue('123456789');
+            const value = $(sel.name).getValue();
+            expect(value).toEqual('123456789');
+        });
+
+        it('TC-033 Name field accepts special characters', function (){
+            browser.url('');
+            const input = $(sel.name).setValue('!(-_:.,? \'"');
+            const value = $(sel.name).getValue();
+            expect(value).toEqual('!(-_:.,? \'"');
+        });
+
+
+
+
+
+    });
 
 });
