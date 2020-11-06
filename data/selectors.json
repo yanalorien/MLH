@@ -14,5 +14,6 @@
   "submit": ".ant-btn",
   "submitName": "//button/span",
   "storyType": ".ant-select-item-option",
-  "tryAgain": ".btn-primary"
+  "tryAgain": ".btn-primary",
+  "spinner": ".ant-input-number-handler"
 }
