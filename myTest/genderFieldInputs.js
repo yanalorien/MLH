@@ -8,13 +8,13 @@ describe('Gender field inputs', function () {
         expect(button).toEqual(true);
     });
 
-    it('TC-042 Radio button she is active', function (){
+    it('TC-043 Radio button she is active', function (){
         browser.url('');
         let button = $$(sel.gender)[1].isClickable();
         expect(button).toEqual(true);
     });
 
-    it('TC-042 Radio button it is active', function (){
+    it('TC-044 Radio button it is active', function (){
         browser.url('');
         let button = $$(sel.gender)[2].isClickable();
         expect(button).toEqual(true);
