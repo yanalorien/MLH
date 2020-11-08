@@ -3,7 +3,7 @@ const path = require('path');
 
 describe('Image field inputs', function () {
 
-    it('TC-034 jpeg image can be uploaded', function (){
+    it('TC-066 jpeg image can be uploaded', function (){
         browser.url('');
         const input = $(sel.imageInput);
         const submit = $(sel.submit);
@@ -20,7 +20,7 @@ describe('Image field inputs', function () {
         browser.refresh();
     });
 
-    it('TC-034 jpeg image can be uploaded', function (){
+    it('TC-067 jpeg image can be uploaded', function (){
         browser.url('');
         const input = $(sel.imageInput);
         const submit = $(sel.submit);

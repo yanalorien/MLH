@@ -8,7 +8,7 @@ describe('data is displayed correctly in text', function () {
 
     describe('Name data is displayed correctly in text', function () {
 
-        it('TC-021 Name displayed correctly in text', function () {
+        it('TC-079 Name displayed correctly in text', function () {
             browser.url('');
             inputValues4(data.name, data.gender.she, data.age, data.storyType);
             const submit = $(sel.submit).click();
@@ -21,7 +21,7 @@ describe('data is displayed correctly in text', function () {
 
     describe('Age data is displayed correctly in text', function () {
 
-        it('TC-021 Age billions, millions, hundreds etc. displayed correctly in text', function () {
+        it('TC-081 Age billions, millions, hundreds etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.first, test.storyType);
             const submit = $(sel.submit).click();
@@ -30,7 +30,7 @@ describe('data is displayed correctly in text', function () {
             expect(text).toEqual(true);
         });
 
-        it('TC-021 Age four fourteen etc. displayed correctly in text', function () {
+        it('TC-082 Age four fourteen etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.second, test.storyType);
             const submit = $(sel.submit).click();
@@ -39,7 +39,7 @@ describe('data is displayed correctly in text', function () {
             expect(text).toEqual(true);
         });
 
-        it('TC-021 Age twenty eight etc. displayed correctly in text', function () {
+        it('TC-083 Age twenty eight etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.third, test.storyType);
             const submit = $(sel.submit).click();
@@ -48,7 +48,7 @@ describe('data is displayed correctly in text', function () {
             expect(text).toEqual(true);
         });
 
-        it('TC-021 Age fifty sixty etc. displayed correctly in text', function () {
+        it('TC-084 Age fifty sixty etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.fourth, test.storyType);
             const submit = $(sel.submit).click();
@@ -57,7 +57,7 @@ describe('data is displayed correctly in text', function () {
             expect(text).toEqual(true);
         });
 
-        it('TC-021 Age eighty etc. displayed correctly in text', function () {
+        it('TC-085 Age eighty etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.fifth, test.storyType);
             const submit = $(sel.submit).click();
