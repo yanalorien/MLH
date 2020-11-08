@@ -3,10 +3,11 @@ const exp = require ('../data/expected.json');
 const data = require('../data/testData.json');
 const test = require('../data/testAge.json');
 const inputValues4 = require('../helpers/inputValues4.js');
+const path = require('path');
 
-describe('data is displayed correctly in text', function () {
+describe('data is displayed correctly at the story page', function () {
 
-    describe('Name data is displayed correctly in text', function () {
+    describe('Name data is displayed correctly at the story page', function () {
 
         it('TC-079 Name displayed correctly in text', function () {
             browser.url('');
@@ -19,7 +20,7 @@ describe('data is displayed correctly in text', function () {
 
     });
 
-    describe('Age data is displayed correctly in text', function () {
+    describe('Age data is displayed correctly at the story page', function () {
 
         it('TC-081 Age billions, millions, hundreds etc. displayed correctly in text', function () {
             browser.url('');
@@ -64,6 +65,26 @@ describe('data is displayed correctly in text', function () {
             const finalText = $(sel.finalText).getText();
             const text = finalText.includes(exp.ageTestFifth);
             expect(text).toEqual(true);
+        });
+
+    });
+
+    describe('Image is displayed correctly at the story page', function () {
+
+        it('TC-081 Image is displayed correctly at the story page', function () {
+            browser.url('');
+            inputValues4(data.name, data.gender.she, data.age, data.storyType);
+            const input = $(sel.imageInput);
+            const filePath = path.join(__dirname, '../images/Darwin.png');
+            const remoteFilePath = browser.uploadFile(filePath);
+            browser.execute(function (){
+                document.getElementsByTagName('input')[6].style.display = "block";
+            });
+            input.waitForDisplayed();
+            input.setValue(remoteFilePath);
+            const submit = $(sel.submit).click();
+            const image = $(sel.imageUploaded).isDisplayed();
+            expect(image).toEqual(true);
         });
 
     });

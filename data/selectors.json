@@ -17,6 +17,6 @@
   "storyType": ".ant-select-item-option",
   "tryAgain": ".btn-primary",
   "spinner": ".ant-input-number-handler",
-  "imageUploaded": ".ant-upload-list-item-image",
+  "imageUploaded": ".error__pic",
   "finalText": ".card-text"
 }
