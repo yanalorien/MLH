@@ -1,12 +1,11 @@
 const sel = require ('../data/selectors.json');
-const exp = require ('../data/expected.json');
 const path = require('path');
 
 describe('Image field inputs', function () {
 
     it('TC-034 jpeg image can be uploaded', function (){
         browser.url('');
-        const input = $(sel.image);
+        const input = $(sel.imageInput);
         const submit = $(sel.submit);
         const filePath = path.join(__dirname, '../images/Mickey.jpg');
         const remoteFilePath = browser.uploadFile(filePath);
@@ -14,7 +13,9 @@ describe('Image field inputs', function () {
             document.getElementsByTagName('input')[6].style.display = "block";
         });
         input.waitForDisplayed();
+        browser.pause(5000);
         input.setValue(remoteFilePath);
+        browser.pause(5000);
         submit.click();
         browser.refresh();
     });

@@ -20,7 +20,7 @@ exports.config = {
         './test/smoke/mainFunctionality.js',
         './test/smoke/labels.js',
         './test/smoke/inputs.js',
-        './myTest/displayInText.js'
+        './myTest/imageFieldInputs.js'
     ],
     // Patterns to exclude.
     exclude: [

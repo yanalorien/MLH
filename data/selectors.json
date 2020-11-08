@@ -10,6 +10,7 @@
   "radioLabel": "//span[@class='ant-radio']/following-sibling::span",
   "storyPlaceholder": ".ant-select-selection-placeholder",
   "image": ".ant-upload",
+  "imageInput": ".ant-upload input",
   "imagePlaceholder": "//span[@class='ant-upload']//div/div",
   "submit": ".ant-btn",
   "submitName": "//button/span",
