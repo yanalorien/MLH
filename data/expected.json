@@ -14,5 +14,9 @@
   "radioText2": "she",
   "radioText3": "it",
   "submitName": "Create!",
-  "ageTestFirst": "one hundred eleven billion two hundred twelve million three hundred thirteen thousand ten"
+  "ageTestFirst": "one hundred eleven billion two hundred twelve million three hundred thirteen thousand ten",
+  "ageTestSecond": "four hundred fourteen billion five hundred fifteen million six hundred sixteen thousand seven hundred seventeen",
+  "ageTestThird": "twenty-eight billion thirty-nine million eighteen thousand forty",
+  "ageTestFourth": "fifty billion sixty million seventy thousand nineteen",
+  "ageTestFifth": "eighty thousand ninety"
 }

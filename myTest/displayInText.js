@@ -21,12 +21,48 @@ describe('data is displayed correctly in text', function () {
 
     describe('Age data is displayed correctly in text', function () {
 
-        it('TC-021  displayed correctly in text', function () {
+        it('TC-021 Age billions, millions, hundreds etc. displayed correctly in text', function () {
             browser.url('');
             inputValues4(test.name, test.gender.she, test.age.first, test.storyType);
             const submit = $(sel.submit).click();
             const finalText = $(sel.finalText).getText();
             const text = finalText.includes(exp.ageTestFirst);
+            expect(text).toEqual(true);
+        });
+
+        it('TC-021 Age four fourteen etc. displayed correctly in text', function () {
+            browser.url('');
+            inputValues4(test.name, test.gender.she, test.age.second, test.storyType);
+            const submit = $(sel.submit).click();
+            const finalText = $(sel.finalText).getText();
+            const text = finalText.includes(exp.ageTestSecond);
+            expect(text).toEqual(true);
+        });
+
+        it('TC-021 Age twenty eight etc. displayed correctly in text', function () {
+            browser.url('');
+            inputValues4(test.name, test.gender.she, test.age.third, test.storyType);
+            const submit = $(sel.submit).click();
+            const finalText = $(sel.finalText).getText();
+            const text = finalText.includes(exp.ageTestThird);
+            expect(text).toEqual(true);
+        });
+
+        it('TC-021 Age fifty sixty etc. displayed correctly in text', function () {
+            browser.url('');
+            inputValues4(test.name, test.gender.she, test.age.fourth, test.storyType);
+            const submit = $(sel.submit).click();
+            const finalText = $(sel.finalText).getText();
+            const text = finalText.includes(exp.ageTestFourth);
+            expect(text).toEqual(true);
+        });
+
+        it('TC-021 Age eighty etc. displayed correctly in text', function () {
+            browser.url('');
+            inputValues4(test.name, test.gender.she, test.age.fifth, test.storyType);
+            const submit = $(sel.submit).click();
+            const finalText = $(sel.finalText).getText();
+            const text = finalText.includes(exp.ageTestFifth);
             expect(text).toEqual(true);
         });
 
