@@ -20,5 +20,6 @@
   "imageUploaded": ".error__pic",
   "finalText": ".card-text",
   "storyTitle": ".mb-4",
-  "tryAgain": ".btn"
+  "tryAgain": ".btn",
+  "homePage": ".hero__form"
 }
