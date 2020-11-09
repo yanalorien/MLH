@@ -1,0 +1,18 @@
+{
+  "he" : {
+    "his": "shakes his head saying",
+    "he1": "He takes a bite",
+    "he2": "He continues doing so"
+  },
+  "she": {
+    "her": "shakes her head saying",
+    "she1": "She takes a bite",
+    "she2": "She continues doing so"
+  },
+  "it": {
+    "its": "shakes its head saying",
+    "it1": "It takes a bite",
+    "it2": "It continues doing so"
+  }
+}
+

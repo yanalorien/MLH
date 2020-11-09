@@ -18,5 +18,6 @@
   "tryAgain": ".btn-primary",
   "spinner": ".ant-input-number-handler",
   "imageUploaded": ".error__pic",
-  "finalText": ".card-text"
+  "finalText": ".card-text",
+  "storyTitle": ".mb-4"
 }

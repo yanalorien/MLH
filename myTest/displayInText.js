@@ -4,6 +4,7 @@ const data = require('../data/testData.json');
 const test = require('../data/testAge.json');
 const inputValues4 = require('../helpers/inputValues4.js');
 const path = require('path');
+// const testGender = require('../data/testGender.json');
 
 describe('data is displayed correctly at the story page', function () {
 
@@ -71,7 +72,7 @@ describe('data is displayed correctly at the story page', function () {
 
     describe('Image is displayed correctly at the story page', function () {
 
-        it('TC-081 Image is displayed correctly at the story page', function () {
+        it('TC-087 Image is displayed correctly at the story page', function () {
             browser.url('');
             inputValues4(data.name, data.gender.she, data.age, data.storyType);
             const input = $(sel.imageInput);
@@ -88,5 +89,18 @@ describe('data is displayed correctly at the story page', function () {
         });
 
     });
+
+    // describe('Genders are displayed correctly at the story page', function () {
+    //
+    //     it('TC-087 Gender he is displayed as he/his at the story page', function () {
+    //         browser.url('');
+    //         inputValues4(data.name, data.gender.he, data.age, data.storyType);
+    //         const submit = $(sel.submit).click();
+    //         const finalText = $(sel.finalText).getText();
+    //         const text = finalText.includes(testGender.he.he1, testGender.he.he1, testGender.he.he1);
+    //         expect(text).toEqual(true);
+    //     });
+    //
+    // });
 
 });
