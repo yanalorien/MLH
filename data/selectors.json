@@ -19,5 +19,6 @@
   "spinner": ".ant-input-number-handler",
   "imageUploaded": ".error__pic",
   "finalText": ".card-text",
-  "storyTitle": ".mb-4"
+  "storyTitle": ".mb-4",
+  "tryAgain": ".btn"
 }
